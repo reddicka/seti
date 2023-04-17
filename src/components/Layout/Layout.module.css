@@ -1,0 +1,8 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainContent {
+    padding: 10px;
+}

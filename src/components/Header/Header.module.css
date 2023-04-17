@@ -1,4 +1,29 @@
-.qwe {
-    background-color: #777777;
-    color: red;
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+}
+
+.logo {
+    margin-right: 15px;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 15px 10px;
+
+    background-color: brown;
+}
+
+.navigation a:hover {
+    background-color: blue;
+}
+
+a.active {
+    background-color: #6363ff;
+    color: #000;
 }

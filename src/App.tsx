@@ -3,12 +3,13 @@ import './App.css';
 import {Navigate, Route, Routes} from "react-router-dom";
 import {globalErrorHandler} from "./store/reducers/AppSlice";
 import {useAppDispatch, useAppSelector} from "./hooks/redux";
-import {Layout} from "./components/Layout";
+import {Layout} from "./components/Layout/Layout";
 import {Preloader} from "./components/Preloader/Preloader";
 
 
 // const LoginPage = React.lazy(() => import("./pages/Login/Login"));
 const HomePage = React.lazy(() => import("./pages/Home/Home"));
+const NewsPage = React.lazy(() => import("./pages/News/News"));
 const NotFoundPage = React.lazy(() => import("./pages/NotFound/NotFound"));
 
 // const paths = {
@@ -53,6 +54,8 @@ export const App: FC = () => {
                 <Route path='/' element={<Layout/>}>
                     {/* index вместо path='/' */}
                     <Route index element={<HomePage/>}/>
+
+                    <Route path='/news' element={<NewsPage/>}/>
 
                     {/*<Route path='/login' element={<LoginPage/>}/>*/}
 
